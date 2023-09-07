@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HNGx Internship Stage One</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: grid;
+            place-items: center;
+            background-color: #f8f8ff;
+        }
+    </style>
+</head>
+<body>
+    <h1 data-testid="slackUserName">Oluwatimilehin Dada</h1>
+    <img src="IMG_1290.jpeg" alt="slack-img" data-testid="slackDisplayImage" height="300" width="300"/>
+    <p data-testid="currentDayOfTheWeek" id="day"></p>
+    <p data-testid="currentUTCTime" id="time"></p>
+    <p data-testid="myTrack">Track: Frontend</p>
+    <a href="https://github.com/Phoenix-0077" data-testid="githubURL">GitHub URL</a>
+</body>
+<script>
+    //Variables
+    var weekDay = document.getElementById('day');
+    var UTCTime = document.getElementById('time');
+    
+    a = new Date()
+    days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    weekDay.innerHTML = days[a.getDay()]
+    UTCTime.innerHTML = a.getTime()
+</script>
+</html>
